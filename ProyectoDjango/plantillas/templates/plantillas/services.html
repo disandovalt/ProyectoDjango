@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada - Planes para tu Portafolio Web</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'plantillas/css/services.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            background-image: url("{% static 'plantillas/img/fondo_pantalla.jpeg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .plan {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan-img {
+            width: 100%;
+            max-width: 150px; /* Ajusta este valor según lo necesario */
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
+        .btn-cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .btn-cart:hover {
+            background-color: #218838;
+        }
+
+        .btn-icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">Portafolio Web</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">Acerca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pricing-section">
+        <div class="container">
+            <div class="row">
+                {% for producto in productos %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="plan text-center">
+                        <h2>{{ producto.nombre }}</h2>
+                        <p>{% if producto.precio == 0 %} GRATIS {% else %} {{ producto.precio }}/mes {% endif %}</p>
+                        <p>{{ producto.descripcion }}</p>
+                        <img src="/media/{{ producto.imagen }}" class="img-fluid plan-img">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <a href="{% url 'carro' %}" class="btn-cart">
+        <i class="fas fa-shopping-cart btn-icon"></i> Comprar aquí
+    </a>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

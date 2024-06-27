@@ -1,0 +1,60 @@
+/* Centra todo el contenido dentro de la clase container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centra las tarjetas dentro de las filas */
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajusta el ancho de las tarjetas para que sean uniformes */
+.card {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Centra el contenido de la tarjeta */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centra la tabla dentro de la tarjeta */
+.table-responsive {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    width: auto;
+    margin: 0 auto;
+}
+
+/* Estiliza la tabla para una mejor apariencia */
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Centra el botón "Agregar Producto" */
+.text-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-group .btn {
+    margin: 0 5px;
+}

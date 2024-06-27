@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    background-image: url('/img/wepik-export-20240411005730l8VL.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    flex: 1;
+}
+
+.cart {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    margin-bottom: 10px;
+}
+
+.btn-checkout {
+    display: none;
+    background-color: #ffc107;
+    border: none;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-checkout:hover {
+    background-color: #ffae00;
+}
+
+.plan {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.plan img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.plan-description {
+    font-size: 0.9rem;
+    margin-top: 15px;
+}

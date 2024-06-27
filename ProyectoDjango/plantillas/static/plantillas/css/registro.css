@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima de la vista */
+}
+
+.card {
+    width: 100%;
+    max-width: 500px; /* Ancho máximo de la tarjeta */
+    background-color: white; /* Fondo blanco para la tarjeta */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    padding: 20px; /* Espacio interno */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input[type="text"], 
+form input[type="password"], 
+form input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px; /* Espacio entre campos */
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.alert ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.alert ul li {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.btn-block {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-block:hover {
+    background-color: #0056b3;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
